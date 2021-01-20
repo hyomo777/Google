@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google</title>
+    <link rel="shortcut icon" type="image⁄x-icon" href="1.jpg">
+</head>
+<body>
+    <img src="1.png"/>
+    <div>
+    <input style="width:650px;height:40px;" id="radius" type="text" placeholder="Google 검색 또는 숫자 입력" size=80 maxlength=100 >
+    <button onClick ="suan()"><img src="2.png" width="40px" height="40px" /></button>
+    <h4 id="screen"></h4>
+    </div>
+    <script>
+        function suan(r) {
+            var r= document.querySelector("#radius").value 
+            var result="";
+             for(var i=1;i<=10;i++){
+                result += (r+"x"+i+"="+r*i+"<br>")
+                document.querySelector("#screen").innerHTML=result
+            }
+        }
+    </script>
+
+    <style>
+        div {
+            text-align: center;
+        }
+        img {
+         display: block;
+          margin: 0px auto; 
+        }
+        
+        input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 30px;
+            box-shadow: 0px 0px 1px 1px rgb(119, 119, 119);
+            }
+            input:focus {outline:none;}
+
+        button {border:0 none;padding:0;margin:0;background:transparent;*overflow:visible;cursor:pointer;outline: 0;}
+        button::-moz-focus-inner {border:0;padding:0;}  
+    </style>
+
+    
+</body>
+</html>
